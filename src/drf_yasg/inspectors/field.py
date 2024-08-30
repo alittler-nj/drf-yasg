@@ -481,7 +481,7 @@ def hint_class_issubclass(hint_class, check_class):
 hinting_type_info = [
     (bool, (openapi.TYPE_BOOLEAN, None)),
     (int, (openapi.TYPE_INTEGER, None)),
-    (list, (openapi.ARRAY_FIELD, None)),
+    (list, (openapi.TYPE_ARRAY, { 'type': openapi.TYPE_STRING })),
     (str, (openapi.TYPE_STRING, None)),
     (float, (openapi.TYPE_NUMBER, None)),
     (dict, (openapi.TYPE_OBJECT, None)),
