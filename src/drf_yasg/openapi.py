@@ -377,8 +377,8 @@ class Operation(SwaggerDict):
 def _check_type(type, format, enum, pattern, items, _obj_type):
     if items and type != TYPE_ARRAY:
         raise AssertionError("items can only be used when type is array")
-    if type == TYPE_ARRAY and not items:
-        raise AssertionError("TYPE_ARRAY requires the items attribute")
+    # if type == TYPE_ARRAY and not items:
+    #     raise AssertionError("TYPE_ARRAY requires the items attribute")
     if pattern and type != TYPE_STRING:
         raise AssertionError("pattern can only be used when type is string")
     if (format or enum or pattern) and type in (TYPE_OBJECT, TYPE_ARRAY, None):
